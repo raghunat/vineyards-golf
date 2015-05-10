@@ -1,0 +1,16 @@
+<h1>The Gallery</h1>
+
+<% if !@photos.blank? %>
+  <div class="row">
+  <% for item in @photos %>
+    <div class="large-6 columns">
+      <div class="card text-center">
+        <h4 class="black"><%= item.name %></h4>
+        <img src="<%= item.url %>" alt="<%= item.name %>">
+      </div>
+    </div>
+  <% end %>
+  </div>
+<% else %>
+  <h4 class="text-center"><em>No Photos Yet</em></h4>
+<% end %>

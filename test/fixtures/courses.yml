@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pic: MyString
+  desc: MyText
+  par: 
+  yardage: 
+
+two:
+  pic: MyString
+  desc: MyText
+  par: 
+  yardage: 

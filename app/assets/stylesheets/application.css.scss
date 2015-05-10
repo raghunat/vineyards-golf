@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ //= require foundation_and_overrides
+
+ */
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url("<%= asset_path('Raleway-Regular.ttf') %>");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url("<%= asset_path('Raleway-Bold.ttf') %>");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.valign-center {
+  transform: translate(0, 25%) !important;
+  -ms-transform: translate(0, 25%) !important;
+  /* IE 9 */
+  
+  -webkit-transform: translate(0, 25%) !important;
+  /* Safari and Chrome */
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.purple-shadow {
+  text-shadow: 1px 1px 3px #CC66FF;
+}
+
+.black {
+  color: black;
+}
+
+.shadow-bg {
+  background-color: black;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.brand-title {
+  color: #E6E6E6;
+  text-decoration: none;
+}
+
+.card {
+  padding: 1em;
+  box-shadow: 0 0 3px #4C4C4C;
+  background-color: #F2EFDF;
+  color: #4C4C4C !important;
+  min-height: 400px;
+}
+
+.card-bg {
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

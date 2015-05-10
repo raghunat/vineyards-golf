@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vineyards Golf Course</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track'=> true %>
+    <%=csrf_meta_tags %>
+</head>
+
+<body>
+  <img src="assets/hole1abg.jpg" alt="" class="bg">
+<div class="page">
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <nav class="tab-bar">
+          <section class="right">
+            <a class="right-off-canvas-toggle menu-icon"><span></span></a>
+          </section>
+          <section class="left tab-bar-section">
+            <h1 class="title"><a href="/" class="brand-title">Vineyards Golf Course</a></h1>
+          </section>
+        </nav>
+        <aside class="right-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li>
+              <label>Menu</label>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/course">Course</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/rates">Rates</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><label>716-679-3652</label></li>
+          </ul>
+        </aside>
+        <section class="main-section">
+          <%= yield %>
+        </section>
+        <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+  </div>
+  <script>
+  $(document).foundation({
+    offcanvas: {
+      open_method: 'overlap',
+      close_on_click: true
+    }
+  });
+  </script>
+</body>
+
+</html>
